@@ -33,6 +33,7 @@ assets/
   logo.png            Full wordmark logo (nav, footer)
   mark.png            Original logo mark (raster)
   mark.svg            Logo mark traced to vector (source for the hero and icons)
+  piece-*.svg         Individual logo pieces used as decorations (banner, product cards)
   og-image.png        1200×630 social share card
   favicon-32.png      Browser tab icon
   apple-touch-icon.png  iOS home-screen icon (180px)
@@ -103,6 +104,13 @@ The pieces have a gentle animation: each one drifts a few pixels **outward from 
 centre** and comes back, like the circle opening and closing. It's turned off for
 visitors who have asked their device for reduced motion.
 
+Every other decorative shape on the page is cut from the same traced logo. Each piece
+is saved on its own (`assets/piece-*.svg`, plus pale "tint" versions). The coral and
+yellow pieces peek into the contact banner. The product cards carry a pale version of
+their own colour's piece in the corner: the blue piece for ExamMate.ai and the coral
+piece for Jam.guru. They're plain coloured SVG images rather than CSS masks, so they
+render on any host, even from a local file.
+
 Two small floating labels sit on top: "Study circle · 6 learners" and "AI tutor ready".
 They show the product idea, people plus AI, without needing a screenshot.
 
@@ -118,8 +126,8 @@ The page follows the order a first-time visitor's questions come in:
    and Jam.guru (independent learners), with a short pitch, three points and a link.
 4. **About:** who's behind it? Global company, emerging-markets focus, IIT Madras
    alumni founders, summarised in four stat cards.
-5. **Contact banner:** a blue banner with the brand shapes peeking in from the edges,
-   and an email button.
+5. **Contact banner:** a blue banner with two real logo pieces (coral and yellow)
+   peeking in from the edges, and an email button.
 6. **Footer:** logo, product links, copyright.
 
 Small coloured dots (shaped like the logo pieces) mark each section label, and the four

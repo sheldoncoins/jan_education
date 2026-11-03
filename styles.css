@@ -149,9 +149,11 @@ h3 { font-size: 1.3rem; font-weight: 600; }
   display: flex; flex-direction: column;
 }
 .product::before {
-  content: ""; position: absolute; width: 220px; height: 220px; right: -70px; top: -70px;
-  background: var(--tint); border-radius: 46% 54% 40% 60% / 55% 45% 55% 45%;
+  content: ""; position: absolute; width: 210px; height: 176px; right: -50px; top: -46px;
+  background: center / contain no-repeat;
 }
+.product:nth-child(1)::before { background-image: url("assets/piece-blue-tint.svg"); }
+.product:nth-child(2)::before { background-image: url("assets/piece-coral-tint.svg"); width: 176px; height: 210px; top: -60px; right: -40px; }
 .product > * { position: relative; }
 .product__badge {
   display: inline-block; font-size: .8rem; font-weight: 500; color: var(--accent);
@@ -186,9 +188,13 @@ h3 { font-size: 1.3rem; font-weight: 600; }
   padding: 56px; border-radius: 32px; color: #fff;
   background: linear-gradient(120deg, var(--blue) 0%, #3BB8EF 45%, #5FC9F8 100%);
 }
-.cta::before, .cta::after { content: ""; position: absolute; border-radius: 44% 56% 50% 50%; }
-.cta::before { width: 180px; height: 180px; background: var(--coral); opacity: .9; right: 22%; bottom: -110px; }
-.cta::after { width: 140px; height: 140px; background: var(--yellow); opacity: .95; right: -40px; top: -50px; }
+/* real logo pieces (assets/piece-*.svg) peeking into the banner */
+.cta::before, .cta::after {
+  content: ""; position: absolute;
+  background: center / contain no-repeat;
+}
+.cta::before { background-image: url("assets/piece-coral.svg"); width: 140px; height: 167px; right: -28px; top: -54px; }
+.cta::after  { background-image: url("assets/piece-yellow.svg"); width: 200px; height: 168px; right: 22%; bottom: -96px; }
 .cta > * { position: relative; z-index: 1; }
 .cta p { margin: 10px 0 0; font-size: 1.1rem; opacity: .92; font-weight: 300; }
 
@@ -214,6 +220,8 @@ h3 { font-size: 1.3rem; font-weight: 600; }
   .nav__brand img { height: 32px; }
   .product, .pillar { padding: 28px; }
   .cta { padding: 40px 28px; }
+  .cta::before { width: 84px; height: 100px; right: -24px; top: -40px; }
+  .cta::after { width: 140px; height: 118px; right: 12%; bottom: -70px; }
   .chip { font-size: .8rem; }
   .chip--a { left: 0; }
   .chip--b { right: 0; }
